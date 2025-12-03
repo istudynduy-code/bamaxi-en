@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Basics for Kids & Parents | BaMaxi Premium</title>
+    <meta name="description" content="Premium English learning for Vietnamese children. Premium courses, downloadable PDFs, and interactive lessons.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Stripe for payments -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🌟 BaMaxi English Premium</h1>
+                <p class="tagline">Learn. Earn. Grow Together</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#premium-courses">Premium Courses</a></li>
+                <li><a href="#free-resources">Free Resources</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2>Transform Your English Learning Journey 🚀</h2>
+                <p>Premium courses, lifetime access, and downloadable resources for Vietnamese families learning English.</p>
+                <div class="cta-buttons">
+                    <a href="#premium-courses" class="btn btn-primary">Explore Premium Courses</a>
+                    <a href="#free-resources" class="btn btn-secondary">Try Free Lessons</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>1000+</h3>
+                        <p>Students Helped</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Premium Resources</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.9★</h3>
+                        <p>Average Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="emoji-large">👨‍👩‍👧‍👦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREE Resources Section (Lead Generation) -->
+    <section class="free-resources" id="free-resources">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">🎁 Free Resources (No Payment Required)</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem;">Start your journey with our free lessons and samples</p>
+
+            <div class="resources-grid">
+                <div class="resource-card free">
+                    <div class="resource-icon">📖</div>
+                    <h3>5 Free Vocabulary Lessons</h3>
+                    <p>Learn animals, colors, food, family, and numbers with audio pronunciation guides.</p>
+                    <ul>
+                        <li>✓ 50+ vocabulary words</li>
+                        <li>✓ Audio pronunciation</li>
+                        <li>✓ Vietnamese translation</li>
+                        <li>✓ Lifetime access</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="unlockFreeResource('vocab')">Get Free Access</button>
+                </div>
+
+                <div class="resource-card free">
+                    <div class="resource-icon">📝</div>
+                    <h3>Grammar Basics (FREE Sample)</h3>
+                    <p>6 most common mistakes Vietnamese learners make, with explanations.</p>
+                    <ul>
+                        <li>✓ Articles (a/the)</li>
+                        <li>✓ Verb tenses</li>
+                        <li>✓ Prepositions</li>
+                        <li>✓ Simple explanations</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="unlockFreeResource('grammar')">Get Free PDF</button>
+                </div>
+
+                <div class="resource-card free">
+                    <div class="resource-icon">🎮</div>
+                    <h3>Interactive Quiz (FREE)</h3>
+                    <p>Test your knowledge with our fun, interactive grammar quiz.</p>
+                    <ul>
+                        <li>✓ 20 questions</li>
+                        <li>✓ Instant feedback</li>
+                        <li>✓ Score tracking</li>
+                        <li>✓ Certificate</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="startQuiz()">Take Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM Courses Section -->
+    <section class="premium-courses" id="premium-courses">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 15px;">⭐ Premium Courses</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #666;">
+                Comprehensive courses with lifetime access, certificates, and downloadable resources
+            </p>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card premium">
+                    <div class="course-badge">BEST SELLER</div>
+                    <div class="course-icon">🌟</div>
+                    <h3>Complete English Basics (Ages 4-8)</h3>
+                    <p class="course-description">Full curriculum for young learners with 50+ lessons</p>
+
+                    <div class="course-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>✓ 50+ video lessons (5-10 min each)</li>
+                            <li>✓ 200+ vocabulary words with audio</li>
+                            <li>✓ 30 downloadable worksheets (PDF)</li>
+                            <li>✓ 15 interactive quizzes</li>
+                            <li>✓ Parent teaching guide</li>
+                            <li>✓ Progress tracking system</li>
+                            <li>✓ Lifetime access</li>
+                            <li>✓ Certificate of completion</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-price">
+                        <span class="price">$29.99</span>
+                        <span class="original-price">$49.99</span>
+                    </div>
+                    <button class="btn btn-primary btn-buy" onclick="buyProduct('course1', 'Complete English Basics', 29.99)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card premium">
+                    <div class="course-badge">POPULAR</div>
+                    <div class="course-icon">📚</div>
+                    <h3>Grammar Mastery for Kids (Ages 6-12)</h3>
+                    <p class="course-description">Deep dive into English grammar addressing Vietnamese errors</p>
+
+                    <div class="course-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>✓ 40 grammar lessons</li>
+                            <li>✓ Vietnamese-specific error focus</li>
+                            <li>✓ 25 downloadable grammar guides</li>
+                            <li>✓ 50+ practice exercises</li>
+                            <li>✓ Answer keys</li>
+                            <li>✓ Printable flashcards</li>
+                            <li>✓ Email support</li>
+                            <li>✓ Certificate</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-price">
+                        <span class="price">$24.99</span>
+                        <span class="original-price">$39.99</span>
+                    </div>
+                    <button class="btn btn-primary btn-buy" onclick="buyProduct('course2', 'Grammar Mastery for Kids', 24.99)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card premium">
+                    <div class="course-badge">NEW</div>
+                    <div class="course-icon">🎯</div>
+                    <h3>Parent's Teaching Masterclass</h3>
+                    <p class="course-description">For parents who want to teach English at home effectively</p>
+
+                    <div class="course-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>✓ 12 in-depth teaching modules</li>
+                            <li>✓ Daily teaching plans</li>
+                            <li>✓ 35 ready-to-use lesson materials</li>
+                            <li>✓ Parent worksheet templates</li>
+                            <li>✓ Assessment tools</li>
+                            <li>✓ 1 email consultation</li>
+                            <li>✓ Private parent community access</li>
+                            <li>✓ Lifetime updates</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-price">
+                        <span class="price">$34.99</span>
+                        <span class="original-price">$54.99</span>
+                    </div>
+                    <button class="btn btn-primary btn-buy" onclick="buyProduct('course3', "Parent's Teaching Masterclass", 34.99)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Products Shop -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">🛍️ Digital Products Shop</h2>
+            <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: #666;">
+                Individual downloadable products - buy just what you need
+            </p>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-icon">📋</div>
+                    <h3>Flashcard Set Bundle (PDF)</h3>
+                    <p>500+ printable flashcards covering all basic vocabulary</p>
+                    <div class="product-features">
+                        <p>✓ 500+ cards</p>
+                        <p>✓ Full color</p>
+                        <p>✓ Print-ready</p>
+                        <p>✓ 20 categories</p>
+                    </div>
+                    <div class="product-price">$9.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product1', 'Flashcard Set Bundle', 9.99)">
+                        Buy PDF
+                    </button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-icon">📊</div>
+                    <h3>Printable Worksheets Pack</h3>
+                    <p>100 worksheets for grammar and vocabulary practice</p>
+                    <div class="product-features">
+                        <p>✓ 100 sheets</p>
+                        <p>✓ Answer keys</p>
+                        <p>✓ All levels</p>
+                        <p>✓ Editable</p>
+                    </div>
+                    <div class="product-price">$12.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product2', 'Printable Worksheets Pack', 12.99)">
+                        Buy PDF
+                    </button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-icon">🗣️</div>
+                    <h3>Pronunciation Guide (Audio + PDF)</h3>
+                    <p>Audio files + detailed guide for 300 difficult words</p>
+                    <div class="product-features">
+                        <p>✓ 300 words</p>
+                        <p>✓ Native audio</p>
+                        <p>✓ Phonetic guide</p>
+                        <p>✓ MP3 + PDF</p>
+                    </div>
+                    <div class="product-price">$14.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product3', 'Pronunciation Guide', 14.99)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-icon">📈</div>
+                    <h3>Progress Tracking System</h3>
+                    <p>Printable charts and tools to track learning progress</p>
+                    <div class="product-features">
+                        <p>✓ 12-month tracker</p>
+                        <p>✓ Goal templates</p>
+                        <p>✓ Assessment sheets</p>
+                        <p>✓ Editable Excel</p>
+                    </div>
+                    <div class="product-price">$7.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product4', 'Progress Tracking System', 7.99)">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-icon">🎨</div>
+                    <h3>Coloring + Learning Activity Pack</h3>
+                    <p>50 fun activities combining art and English learning</p>
+                    <div class="product-features">
+                        <p>✓ 50 activities</p>
+                        <p>✓ For ages 3-8</p>
+                        <p>✓ Colorful designs</p>
+                        <p>✓ Full color PDF</p>
+                    </div>
+                    <div class="product-price">$8.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product5', 'Coloring Activity Pack', 8.99)">
+                        Buy PDF
+                    </button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-icon">🎓</div>
+                    <h3>Vietnamese Teacher Resource Kit</h3>
+                    <p>Complete kit for teachers - lesson plans, tests, materials</p>
+                    <div class="product-features">
+                        <p>✓ 30 lesson plans</p>
+                        <p>✓ Test papers</p>
+                        <p>✓ Classroom games</p>
+                        <p>✓ Full editable</p>
+                    </div>
+                    <div class="product-price">$19.99</div>
+                    <button class="btn btn-secondary btn-buy" onclick="buyProduct('product6', 'Teacher Resource Kit', 19.99)">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Bundles -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">💰 Bundle Deals (Save More!)</h2>
+
+            <div class="bundles-grid">
+                <div class="bundle-card">
+                    <div class="bundle-badge">STARTER</div>
+                    <h3>Starter Bundle</h3>
+                    <p>Perfect for trying everything</p>
+                    <div class="bundle-includes">
+                        <p>✓ 3 Free lessons</p>
+                        <p>✓ Sample worksheets</p>
+                        <p>✓ Free quiz</p>
+                    </div>
+                    <div class="bundle-price">
+                        <span class="price">FREE</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('You already have access! Check Free Resources section.')">
+                        Already Included
+                    </button>
+                </div>
+
+                <div class="bundle-card featured">
+                    <div class="bundle-badge">RECOMMENDED</div>
+                    <h3>Complete Family Bundle</h3>
+                    <p>Best value - all courses + all products</p>
+                    <div class="bundle-includes">
+                        <p>✓ All 3 premium courses</p>
+                        <p>✓ All 6 digital products</p>
+                        <p>✓ Email support (6 months)</p>
+                        <p>✓ Private community</p>
+                        <p>✓ Monthly updates</p>
+                    </div>
+                    <div class="bundle-price">
+                        <span class="price">$99.99</span>
+                        <span class="original-price">$189.99</span>
+                        <span class="savings">SAVE 47%!</span>
+                    </div>
+                    <button class="btn btn-primary btn-buy" onclick="buyProduct('bundle1', 'Complete Family Bundle', 99.99)">
+                        Buy Bundle
+                    </button>
+                </div>
+
+                <div class="bundle-card">
+                    <div class="bundle-badge">COURSES</div>
+                    <h3>All Courses Bundle</h3>
+                    <p>All three premium courses</p>
+                    <div class="bundle-includes">
+                        <p>✓ Basics course</p>
+                        <p>✓ Grammar course</p>
+                        <p>✓ Parent masterclass</p>
+                        <p>✓ Lifetime access</p>
+                    </div>
+                    <div class="bundle-price">
+                        <span class="price">$69.99</span>
+                        <span class="original-price">$89.97</span>
+                        <span class="savings">SAVE 22%!</span>
+                    </div>
+                    <button class="btn btn-primary btn-buy" onclick="buyProduct('bundle2', 'All Courses Bundle', 69.99)">
+                        Buy Bundle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Complete Your Purchase</h2>
+            <form id="paymentForm" onsubmit="processPayment(event)">
+                <input type="hidden" id="productName" value="">
+                <input type="hidden" id="productPrice" value="">
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="customerEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="paymentMethod" onchange="updatePaymentUI()">
+                        <option value="stripe">Credit/Debit Card (Stripe)</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Bank Transfer</option>
+                        <option value="local">Local Payment (Vietnam)</option>
+                    </select>
+                </div>
+
+                <div id="stripeContainer" class="payment-container">
+                    <label>Card Details</label>
+                    <div id="card-element" class="card-input"></div>
+                    <p class="payment-note">🔒 Secure payment processed by Stripe</p>
+                </div>
+
+                <div id="paypalContainer" class="payment-container" style="display:none;">
+                    <p>You will be redirected to PayPal to complete payment</p>
+                </div>
+
+                <div id="bankContainer" class="payment-container" style="display:none;">
+                    <p>Bank transfer details:</p>
+                    <p><strong>Bank:</strong> Example Bank</p>
+                    <p><strong>Account:</strong> 123456789</p>
+                    <p>Please reference your email in the transfer</p>
+                </div>
+
+                <div id="localContainer" class="payment-container" style="display:none;">
+                    <p>Local payment options:</p>
+                    <p>• Momo: 0936xxx</p>
+                    <p>• ZaloPay: Available</p>
+                    <p>• Bank transfer: Available</p>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <p>Product: <strong id="summaryProduct">-</strong></p>
+                    <p>Price: <strong id="summaryPrice">$0.00</strong></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-pay">
+                    Complete Payment
+                </button>
+                <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 1rem;">
+                    After payment, you'll receive download links via email
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">❓ Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do I get lifetime access?</h3>
+                    <p>Yes! All purchases include lifetime access. You can download and use materials forever.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>Credit/debit cards (Stripe), PayPal, bank transfer, and local Vietnam payments (Momo, ZaloPay).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I get a refund?</h3>
+                    <p>Yes, 30-day money-back guarantee if you're not satisfied.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are the PDFs downloadable?</h3>
+                    <p>Yes! All PDFs are immediately downloadable after purchase. They're also emailed to you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer discounts?</h3>
+                    <p>Yes! Bundle deals save you up to 47%. Subscribe to email for exclusive offers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can teachers use these materials?</h3>
+                    <p>Yes! Teacher licenses available. Contact us for bulk pricing for schools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Newsletter -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 style="text-align: center;">📧 Stay Updated</h2>
+            <div class="contact-content">
+                <p style="text-align: center; margin-bottom: 20px;">
+                    Subscribe to our newsletter for exclusive deals, new courses, and teaching tips!
+                </p>
+                <form class="contact-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" id="emailSubscribe" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe Free</button>
+                </form>
+                <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #666;">
+                    We'll send you exclusive offers and teaching tips. Unsubscribe anytime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 BaMaxi English Premium. Made with ❤️ for Vietnamese learners.</p>
+            <div class="footer-links">
+                <a href="#contact">Contact</a> | 
+                <a href="#" onclick="alert('Privacy Policy coming soon')">Privacy</a> | 
+                <a href="#" onclick="alert('Terms coming soon')">Terms</a> |
+                <a href="#" onclick="alert('Refund Policy: 30-day money-back guarantee')">Refund Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
